@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom'
 
 import { RouteWithSubRoutes } from '../utils/Routes'
+import { Button } from 'reactstrap';
 
 const Content = ({ routes }) => (
   <div>
@@ -30,6 +31,7 @@ const Home = ({ routes }) => (
 const Romms = ({ routes }) => (
   <div>
   <h2>Habitaciones por implementar</h2>
+  <Button color="danger">Danger!</Button>
   </div>
 
 )
