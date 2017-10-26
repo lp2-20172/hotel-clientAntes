@@ -17,7 +17,9 @@ import { login, logout } from '../utils/OAuth2'
 import config from '../../conn'
 import { getLocalUserInfo } from '../../actions/auth-action'
 
-
+//estilos
+import '../css/style.css';
+import '../images/font-awesome/css/font-awesome.min.css'
 
 class RouteConfigExample extends React.Component {
   constructor(props) {
@@ -104,15 +106,22 @@ class RouteConfigExample extends React.Component {
           //onClick={!isWidthUp('lg', width) && this.handleDrawerClose}
           open={this.state.open}
         >
-          <div >
-            <ul>
-              <li><Link to="/">Inicio</Link></li>
-              <li><Link to="/login">login</Link></li>
-              <li><Link to="/romms">Habitaciones</Link></li>
-              <li><Link to="/photos">Fotos</Link></li>
-              <li><Link to="/form">Registrate</Link></li>
-            </ul>
-          </div>
+          <header>
+            <nav className="main">
+              <div className="imglogo">
+              </div>
+              <ul>
+                <li><Link to="/">Inicio</Link></li>
+                <li><Link to="/login">login</Link></li>
+                <li><Link to="/romms">Habitaciones</Link></li>
+                <li><Link to="/photos">Fotos</Link></li>
+                <li><Link to="/form">Registrate</Link></li>
+              </ul>
+              <span>
+                <i className="fa fa-bars fa-2x " aria-hidden="true"></i>
+              </span>
+            </nav>
+          </header>
         </div>
         <main>
           {routes.map((route, i) => (
@@ -129,6 +138,22 @@ class RouteConfigExample extends React.Component {
             />
           ))}
         </main>
+        <footer>
+          <div className="footer">
+            <div className="footer_seccion">
+              <h3>HOTEL 5 ESTRELLAS</h3>
+              <p>Con fabulosos cuartos te ofrecemos una buena atención</p>
+            </div>
+            <div className="footer_seccion">
+              <h3>CONTACTENOS</h3>
+              <p>Av.Arequipa</p>
+              <p>Celular: 957463521</p>
+              <p>E-mail: hotel5estrellas.gmail.com</p>
+
+            </div>
+
+          </div>
+        </footer>
       </div>
 
     )
