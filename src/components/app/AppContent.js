@@ -28,13 +28,8 @@ const Home = ({ routes }) => (
 ////////////////////////////////////////////////////////////
 // first our route components
 
-const Romms = ({ routes }) => (
-  <div>
-  <h2>Habitaciones por implementar</h2>
-  <Button color="danger">Danger!</Button>
-  </div>
+const Romms = () => <h3></h3>
 
-)
 
 const Photos = ({ routes }) => (
   <div>

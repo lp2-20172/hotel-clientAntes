@@ -1,5 +1,6 @@
 import { Home, Romms, Photos,Reservation, Form }
   from './app/AppContent'
+  import CategoriaList from './categorias/List'
 import Login from './Login'
 
 const routese = [
@@ -46,6 +47,16 @@ const routes = [
     icon: 'send',
     component: Form
   },
+  
+      {
+        path: '/romms',
+        exact: true,
+        title: 'Categorias!',
+        icon: 'send',
+        component: CategoriaList
+        
+      },
+    
  
 ]
 

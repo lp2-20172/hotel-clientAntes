@@ -1,26 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Card, { CardHeader, CardContent } from 'material-ui/Card'
-import Avatar from 'material-ui/Avatar'
-import Typography from 'material-ui/Typography'
-import TextField from 'material-ui/TextField';
-import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
-import Paper from 'material-ui/Paper';
+import '../css/style.css';
 
-import { getList, del } from '../../actions/categoria-action'
+//import { getList, del } from '../../actions/categoria-action'
 import { connect } from 'react-redux'
 
-import Button from 'material-ui/Button';
-import AddIcon from 'material-ui-icons/Add';
 import {
     Link
 } from 'react-router-dom'
 
 
 class List extends Component {
-    componentWillMount() {
+    /*componentWillMount() {
         this.props.getList("")
-    }
+}*/
 
     change = (e) => {
         const q = e.target.value
@@ -35,76 +28,37 @@ class List extends Component {
     render() {
         let { list, del } = this.props
         if (list) {
-            
-        } else{
-            list =[]
+
+        } else {
+            list = []
 
         }
 
         return (
+            <div className=" contenedor contenedor_habitacion" key="Subheader" >
+                    <div className="habitacion" >
+                        <div className="img">
+                            <img src="" alt="" />
+                        </div>
+                        <div className="info_rooms">
+                            <div className="info">
+                                <h3>
+                                    Habitacion Simple
+                                </h3>
+                                <p>
+                                    s/ 200
+                                </p>
+                            </div>
+                            <div className="info info_color">
+                                <Link exact to="/informations" activeClassName="selected"><h3>Mas informacion</h3></Link>
+                                <p>
+                                    <Link exact to="/forms" activeClassName="selected">Reservar</Link>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
 
-            <Card>
-                <CardHeader
-                    avatar={
-                        <Avatar aria-label="Recipe" >
-                            R
-                          </Avatar>
-                    }
-                    title="User List"
-                    subheader="Users list"
-                />
-
-                <CardContent>
-                    <Typography component="p">
-                        q={this.props.q}
-                    </Typography>
-
-                    <TextField
-                        id="search"
-                        label="Search"
-                        value={this.props.q}
-                        onChange={this.change}
-                        margin="normal"
-                    />
-
-                    <Button fab color="primary" aria-label="add" onClick={this.handleClick}>
-                        <AddIcon />
-                    </Button>
-
-                    <Paper style={{
-                        overflowX: 'auto',
-                    }}>
-                        <Table>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>#</TableCell>
-                                    <TableCell >Nombre</TableCell>
-                                    <TableCell >Código</TableCell>
-                                    <TableCell >Edit</TableCell>
-                                    <TableCell >Delete</TableCell>
-                                </TableRow>
-                            </TableHead>
-
-                            <TableBody>
-                                {list.map((d, index) =>
-                                    <TableRow key={index}>
-                                        <TableCell numeric>{index + 1}</TableCell>
-                                        <TableCell >{d.nombre}</TableCell>
-                                        <TableCell >{d.codigo}</TableCell>
-                                        <TableCell >
-                                            <Link to={`/catalogo/categorias/edit/${d.id}`} className="ui basic button green">Edit</Link>
-                                        </TableCell>
-                                        <TableCell >
-                                            <Button onClick={() => del(d.id, this.props.history)} >Delete</Button>
-                                        </TableCell>
-                                    </TableRow>
-                                )}
-                            </TableBody>
-                        </Table>
-                    </Paper>
-                </CardContent>
-
-            </Card>
         );
     }
 }
@@ -127,6 +81,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 */
 export default connect(mapStateToProps, {
-    getList,
-    del
+    /* getList,
+     del*/
 })(List)
