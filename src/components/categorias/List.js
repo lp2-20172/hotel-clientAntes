@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { getList, del } from '../../actions/categoria-action'
 import '../css/style.css';
 
 //import { getList, del } from '../../actions/categoria-action'
@@ -11,9 +12,9 @@ import {
 
 
 class List extends Component {
-    /*componentWillMount() {
+    componentWillMount() {
         this.props.getList("")
-}*/
+}
 
     change = (e) => {
         const q = e.target.value
@@ -36,17 +37,18 @@ class List extends Component {
 
         return (
             <div className=" contenedor contenedor_habitacion" key="Subheader" >
-                    <div className="habitacion" >
+                   { list.map((d, index) =>
+                    <div className="habitacion" key={d.fotos}>
                         <div className="img">
-                            <img src="" alt="" />
+                            <img src={d.fotos} alt={d.nombre} />
                         </div>
                         <div className="info_rooms">
                             <div className="info">
                                 <h3>
-                                    Habitacion Simple
+                                    {d.nombre}
                                 </h3>
                                 <p>
-                                    s/ 200
+                                    s/ {d.precio}
                                 </p>
                             </div>
                             <div className="info info_color">
@@ -57,6 +59,7 @@ class List extends Component {
                             </div>
                         </div>
                     </div>
+                )}
             </div>
 
         );
@@ -72,15 +75,15 @@ const mapStateToProps = (state) => {
     }
 }
 
-/*
+
 const mapDispatchToProps = (dispatch) => {
     return {
         getList: (q) => { dispatch(getList(q)) },
         del: (id, h) => { dispatch(del(id, h)) }
     }
 }
-*/
+
 export default connect(mapStateToProps, {
-    /* getList,
-     del*/
+     getList,
+     del
 })(List)
