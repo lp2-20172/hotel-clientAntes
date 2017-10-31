@@ -50,12 +50,12 @@ const items = [
     caption:'Cama'
   },
   {
-    src: 'http://rossello-barcelona.eveniahotels.com/wp-content/uploads/2013/12/Family.jpg',
+    src: 'http://www.ceramicaitalia.com/banos/images/portfolio/Ambiente-PS-Sanitario-Versalles.png',
 
     caption: 'Baño'
   },
   {
-    src: 'http://rossello-barcelona.eveniahotels.com/wp-content/uploads/2013/12/Family.jpg',
+    src: 'https://st.hzcdn.com/simgs/3e01c10a005769a5_4-3462/modern-balcony.jpg',
 
     caption: 'Vista al mar'
   }

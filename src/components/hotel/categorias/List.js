@@ -38,7 +38,7 @@ class List extends Component {
             <div className=" contenedor contenedor_habitacion" key="Subheader" >
                    { list.map((d, index) =>
                     <div className="habitacion" key={d.fotos}>
-                        <div className="img">
+                        <div className="img-habitacion">
                             <img src={d.fotos} alt={d.nombre} />
                         </div>
                         <div className="info_rooms">

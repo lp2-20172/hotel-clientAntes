@@ -4,13 +4,17 @@
 }
 .habitacion_info{
   height: 596px !important;
-  width: 740px !important;
+  width: 735px !important;
   margin: 0 auto;
   margin-top: 34px;
 }
 .info_reserva{
 padding-top: 27px;
 
+}
+.img img{
+  height: 486px !important;
+  width: 100% !important;
 }
 .cuerpoform{
   display: flex;
@@ -118,9 +122,9 @@ footer{
   width: 375px;
   height: 280px;
 }
-.img img{
-  width: 101.5%;
-  height: 100%;
+.img-habitacion img{
+  width: 100%;
+  height: 275px;
 }
 .habitacion{
   height: 386px;
