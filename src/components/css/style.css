@@ -10,7 +10,7 @@
 }
 .info_reserva{
 padding-top: 27px;
-  
+
 }
 .cuerpoform{
   display: flex;
@@ -52,10 +52,13 @@ input{
   height: 102px;
   background-repeat: no-repeat;
   background-size: 72%;
+  margin-top: 10px;
+
 }
 .main{
-  padding-top: 20px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main li{
   display: inline-block;
