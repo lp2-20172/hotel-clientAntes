@@ -15,7 +15,7 @@ const routese = [
 // then our route config
 const routes = [
   {
-    path: '/',
+    path: '/home',
     title: 'Home!',
     icon: 'home',
     exact: true,

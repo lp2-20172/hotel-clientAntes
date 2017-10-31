@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  
+  Link
 } from 'react-router-dom'
 
 import { RouteWithSubRoutes } from '../utils/Routes'
@@ -16,7 +16,27 @@ const Content = ({ routes }) => (
 )
 
 const Home = ({ routes }) => (
-  <div>
+  <div className="imgbackground portada" >
+    <div className="formulario">
+      <input className="form" type="date" name="bday" min="2000-01-02" >
+      </input>
+      <input className="form" type="date" name="bday" min="2000-01-02">
+      </input>
+
+      <select className="form">
+        <option value="Habitacion">Habitacion</option>
+        <option value="Individual">Individual</option>
+        <option value="Matrimonial">Matrimonial</option>
+        <option value="Triple">Triple</option>
+      </select>
+      <Link exact to="/rooms" activeClassName="selected"><input className="form btn" type="submit" name="" value="Reservar" /></Link>
+
+    </div>
+    <div className="text">
+      <h1>Te ayudamos a que pases una noche increible en nuestras fabulosas habitaciones</h1>
+    </div>
+
+
   </div>
 
 )
@@ -33,21 +53,21 @@ const Romms = () => <h3></h3>
 
 const Photos = ({ routes }) => (
   <div>
-  <h2>Fotos por implementar</h2>
+    <h2>Fotos por implementar</h2>
   </div>
 
 )
 
 const Reservation = ({ routes }) => (
   <div>
-  <h2>Reservacion  por implementar</h2>
+    <h2>Reservacion  por implementar</h2>
   </div>
 
 )
 
 const Form = ({ routes }) => (
   <div>
-  <h2>Registrate</h2>
+    <h2>Registrate</h2>
   </div>
 
 )
@@ -55,7 +75,7 @@ const Form = ({ routes }) => (
 
 
 
-export { Content, Home , Romms, Photos, Reservation, Form }
+export { Content, Home, Romms, Photos, Reservation, Form }
 
 
 /*

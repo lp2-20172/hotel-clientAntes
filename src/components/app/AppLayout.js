@@ -111,7 +111,7 @@ class RouteConfigExample extends React.Component {
               <div className="imglogo">
               </div>
               <ul>
-                <li><Link to="/">Inicio</Link></li>
+                <li><Link to="/home">Inicio</Link></li>
                 <li><Link to="/login">login</Link></li>
                 <li><Link to="/romms">Habitaciones</Link></li>
                 <li><Link to="/photos">Fotos</Link></li>
