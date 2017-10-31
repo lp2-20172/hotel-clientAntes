@@ -18,10 +18,10 @@ const Content = ({ routes }) => (
 const Home = ({ routes }) => (
   <div className="imgbackground portada" >
     <div className="formulario">
-      <input className="form" type="date" name="bday" min="2000-01-02" >
-      </input>
-      <input className="form" type="date" name="bday" min="2000-01-02">
-      </input>
+      // <input className="form" type="date" name="bday" min="2000-01-02" >
+      // </input>
+      // <input className="form" type="date" name="bday" min="2000-01-02">
+      // </input>
 
       <select className="form">
         <option value="Habitacion">Habitacion</option>
