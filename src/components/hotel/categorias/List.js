@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { getList, del } from '../../actions/categoria-action'
-import '../css/style.css';
-
+import { getList, del } from '../../../actions/categoria-action'
 //import { getList, del } from '../../actions/categoria-action'
 import { connect } from 'react-redux'
 
 import {
-    Link
+    Link,
+    NavLink
 } from 'react-router-dom'
 
 
@@ -52,7 +51,7 @@ class List extends Component {
                                 </p>
                             </div>
                             <div className="info info_color">
-                                <Link exact to="/informations" activeClassName="selected"><h3>Mas informacion</h3></Link>
+                                <NavLink exact to="/informations" activeClassName="selected"><h3>Mas informacion</h3></NavLink>
                                 <p>
                                     <Link exact to="/forms" activeClassName="selected">Reservar</Link>
                                 </p>

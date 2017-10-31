@@ -29,7 +29,7 @@ const Home = ({ routes }) => (
         <option value="Matrimonial">Matrimonial</option>
         <option value="Triple">Triple</option>
       </select>
-      <Link exact to="/rooms" activeClassName="selected"><input className="form btn" type="submit" name="" value="Reservar" /></Link>
+      <Link exact to='/hotel/categorias/list' activeClassName="selected"><input className="form btn" type="submit" name="" value="Reservar" /></Link>
 
     </div>
     <div className="text">
@@ -47,35 +47,7 @@ const Home = ({ routes }) => (
 
 ////////////////////////////////////////////////////////////
 // first our route components
-
-const Romms = () => <h3></h3>
-
-
-const Photos = ({ routes }) => (
-  <div>
-    <h2>Fotos por implementar</h2>
-  </div>
-
-)
-
-const Reservation = ({ routes }) => (
-  <div>
-    <h2>Reservacion  por implementar</h2>
-  </div>
-
-)
-
-const Form = ({ routes }) => (
-  <div>
-    <h2>Registrate</h2>
-  </div>
-
-)
-
-
-
-
-export { Content, Home, Romms, Photos, Reservation, Form }
+export { Content, Home, }
 
 
 /*
