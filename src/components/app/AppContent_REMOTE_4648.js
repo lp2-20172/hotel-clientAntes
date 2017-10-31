@@ -29,7 +29,7 @@ const Home = ({ routes }) => (
         <option value="Matrimonial">Matrimonial</option>
         <option value="Triple">Triple</option>
       </select>
-      <Link exact to='/hotel/categorias/list' activeClassName="selected"><input className="form btn" type="submit" name="" value="Reservar" /></Link>
+      <Link exact to="/rooms" activeClassName="selected"><input className="form btn" type="submit" name="" value="Reservar" /></Link>
 
     </div>
     <div className="text">
@@ -47,9 +47,6 @@ const Home = ({ routes }) => (
 
 ////////////////////////////////////////////////////////////
 // first our route components
-<<<<<<< HEAD
-export { Content, Home, }
-=======
 
 const Romms = () => <h3></h3>
 
@@ -89,7 +86,6 @@ const Form = ({ routes }) => (
 
 
 export { Content, Home, Romms, Photos, Reservation, Form }
->>>>>>> a87925c1401ccdd8c82b957e22c4b633ef25f2d2
 
 
 /*

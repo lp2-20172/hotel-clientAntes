@@ -194,8 +194,8 @@ footer{
   border-radius: 5px;
   display: block;
   margin: 10px;
-  width: 320px;
-  height: 40px;
+  width: 340px;
+  height: 45px;
   font-size: 16px;
 }
 .form2btn{
@@ -207,7 +207,7 @@ footer{
   color: #000;
   font-size: 18px;
   width: 340px;
-  height: 40px;
+  height: 45px;
 }
 .form2btn:hover {
   background: #A0E01A;

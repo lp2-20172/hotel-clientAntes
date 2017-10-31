@@ -47,49 +47,7 @@ const Home = ({ routes }) => (
 
 ////////////////////////////////////////////////////////////
 // first our route components
-<<<<<<< HEAD
 export { Content, Home, }
-=======
-
-const Romms = () => <h3></h3>
-
-
-const Photos = ({ routes }) => (
-  <div>
-    <h2>Fotos por implementar</h2>
-  </div>
-
-)
-
-const Reservation = ({ routes }) => (
-  <div>
-    <h2>Reservacion  por implementar</h2>
-  </div>
-
-)
-
-const Form = ({ routes }) => (
-  <div className="imgbackground portada">
-    <div className="reserva">
-      <h2>REGISTRO</h2>
-        <input className="form2" type="text"  placeholder="Nombre"></input>
-        <input className="form2" type="text"  placeholder="Apellido"></input>
-        <input className="form2" type="text"  placeholder="DNI"></input>
-        <input className="form2" type="name"  placeholder="Usuario"></input>
-        <input className="form2" type="password"  placeholder="Contraseña"></input>
-        <input className="form2" type="email" placeholder="E-mail"></input>
-        <input className="form2btn"  type="button" name="aceptar" value="Aceptar"/>
-    </div>
-
-  </div>
-
-)
-
-
-
-
-export { Content, Home, Romms, Photos, Reservation, Form }
->>>>>>> a87925c1401ccdd8c82b957e22c4b633ef25f2d2
 
 
 /*
@@ -98,7 +56,9 @@ import {
   //Route,
   Link
 } from 'react-router-dom'
+
 import Routes, {RouteWithSubRoutes} from '../utils/Routes'
+
 // Each logical "route" has two components, one for
 // the sidebar and one for the main area. We want to
 // render both of them in different places when the
@@ -118,6 +78,7 @@ const routes = [
     main: () => <h2>Shoelaces</h2>
   }
 ]
+
 const SidebarExample = () => (
   <Router>
     <div style={{ display: 'flex' }}>
@@ -131,6 +92,7 @@ const SidebarExample = () => (
           <li><Link to="/bubblegum">Bubblegum</Link></li>
           <li><Link to="/shoelaces">Shoelaces</Link></li>
         </ul>
+
         {routes.map((route, index) => (
           // You can render a <Route> in as many places
           // as you want in your app. It will render along
@@ -147,6 +109,7 @@ const SidebarExample = () => (
           />
         ))}
       </div>
+
       <div style={{ flex: 1, padding: '10px' }}>
         {routes.map((route, index) => (
           // Render more <Route>s with the same paths as
@@ -162,5 +125,7 @@ const SidebarExample = () => (
     </div>
   </Router>
 )
+
 export default SidebarExample
+
 */
