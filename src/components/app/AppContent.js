@@ -66,8 +66,18 @@ const Reservation = ({ routes }) => (
 )
 
 const Form = ({ routes }) => (
-  <div>
-    <h2>Registrate</h2>
+  <div className="imgbackground portada">
+    <div className="reserva">
+      <h2>REGISTRO</h2>
+        <input className="form2" type="text"  placeholder="Nombre"></input>
+        <input className="form2" type="text"  placeholder="Apellido"></input>
+        <input className="form2" type="text"  placeholder="DNI"></input>
+        <input className="form2" type="name"  placeholder="Usuario"></input>
+        <input className="form2" type="password"  placeholder="Contraseña"></input>
+        <input className="form2" type="email" placeholder="E-mail"></input>
+        <input className="form2btn"  type="button" name="aceptar" value="Aceptar"/>
+    </div>
+
   </div>
 
 )
@@ -84,9 +94,7 @@ import {
   //Route,
   Link
 } from 'react-router-dom'
-
 import Routes, {RouteWithSubRoutes} from '../utils/Routes'
-
 // Each logical "route" has two components, one for
 // the sidebar and one for the main area. We want to
 // render both of them in different places when the
@@ -106,7 +114,6 @@ const routes = [
     main: () => <h2>Shoelaces</h2>
   }
 ]
-
 const SidebarExample = () => (
   <Router>
     <div style={{ display: 'flex' }}>
@@ -120,7 +127,6 @@ const SidebarExample = () => (
           <li><Link to="/bubblegum">Bubblegum</Link></li>
           <li><Link to="/shoelaces">Shoelaces</Link></li>
         </ul>
-
         {routes.map((route, index) => (
           // You can render a <Route> in as many places
           // as you want in your app. It will render along
@@ -137,7 +143,6 @@ const SidebarExample = () => (
           />
         ))}
       </div>
-
       <div style={{ flex: 1, padding: '10px' }}>
         {routes.map((route, index) => (
           // Render more <Route>s with the same paths as
@@ -153,7 +158,5 @@ const SidebarExample = () => (
     </div>
   </Router>
 )
-
 export default SidebarExample
-
 */
