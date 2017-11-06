@@ -25,9 +25,9 @@ class List extends Component {
         return (
             <div className=" contenedor contenedor_habitacion" key="Subheader" >
                    { list.map((d, index) =>
-                    <div className="habitacion" key={d.fotos}>
+                    <div className="habitacion" key={d.imagen1}>
                         <div className="img-habitacion">
-                            <img src={d.fotos} alt={d.nombre} />
+                            <img src={d.imagen1} alt={d.nombre} />
                         </div>
                         <div className="info_rooms">
                             <div className="info">
@@ -45,6 +45,8 @@ class List extends Component {
                                 </p>
                             </div>
                         </div>
+
+
                     </div>
                 )}
             </div>
@@ -65,11 +67,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getList: (q) => { dispatch(getList(q)) },  
+        getList: (q) => { dispatch(getList(q)) },
     }
 }
 
 export default connect(mapStateToProps, {
      getList,
-    
+
 })(List)

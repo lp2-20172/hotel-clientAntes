@@ -46,7 +46,9 @@ class List extends Component {
                                     <Link exact to="/forms" activeClassName="selected">Reservar</Link>
                                 </p>
                             </div>
+
                         </div>
+                      
                     </div>
                 )}
             </div>
