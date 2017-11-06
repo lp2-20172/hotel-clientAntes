@@ -1,8 +1,9 @@
-import { Content, Romms, Photos, Reservation, Form }
+import { Content }
   from './app/AppContent'
 import CategoriaList from './hotel/categorias/List'
 import Information from './hotel/categorias/Information'
 import Client from './hotel/clientes/Client'
+import Home from './hotel/home/Home'
 import Login from './Login'
 
 const routese = [
@@ -16,14 +17,12 @@ const routese = [
 ////////////////////////////////////////////////////////////
 // then our route config
 const routes = [
-  // {
-  //   path: '/home',
-  //   title: 'Home!',
-  //   icon: 'home',
-  //   exact: true,
-  //   component: Home
-  // },
-
+  {
+    path: '/home',
+    exact: true,
+    title: 'Categorias',
+    component: Home
+  },
   {
     path: '/hotel/categorias/list',
     exact: true,

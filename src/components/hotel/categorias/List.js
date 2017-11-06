@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { getList, del } from '../../../actions/categoria-action'
-//import { getList, del } from '../../actions/categoria-action'
 import { connect } from 'react-redux'
 
 import {
@@ -15,15 +14,6 @@ class List extends Component {
         this.props.getList("")
 }
 
-    change = (e) => {
-        const q = e.target.value
-        console.log("q:" + q)
-        this.props.getList(q)
-    }
-
-    handleClick = () => {
-        this.props.history.push('/catalogo/categorias/new');
-    }
 
     render() {
         let { list, del } = this.props

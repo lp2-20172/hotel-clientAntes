@@ -10,7 +10,8 @@ import {
 } from 'react-router-dom'
 import { RouteWithSubRoutes } from '../utils/Routes'
 import { routes, routese } from '../routes'
-
+import Header from './header/Header'
+import Footer from './footer/Footer'
 import { connect } from 'react-redux'
 import { toggleTheme } from '../../actions'
 import { login, logout } from '../utils/OAuth2'
@@ -106,22 +107,9 @@ class RouteConfigExample extends React.Component {
           //onClick={!isWidthUp('lg', width) && this.handleDrawerClose}
           open={this.state.open}
         >
-          <header>
-            <nav className="main">
-              <div className="imglogo">
-              </div>
-              <ul>
-                <li><Link to="/home">Inicio</Link></li>
-                <li><Link to="/login">login</Link></li>
-                <li><Link to='/hotel/categorias/list'>Habitaciones</Link></li>
-                <li><Link to="/photos">Fotos</Link></li>
-                <li><Link to='/form'>Registrate</Link></li>
-              </ul>
-              <span>
-                <i className="fa fa-bars fa-2x " aria-hidden="true"></i>
-              </span>
-            </nav>
-          </header>
+        <header>
+          <Header/>
+        </header>   
         </div>
         <main>
           {routes.map((route, i) => (
@@ -139,20 +127,7 @@ class RouteConfigExample extends React.Component {
           ))}
         </main>
         <footer>
-          <div className="footer">
-            <div className="footer_seccion">
-              <h3>HOTEL 5 ESTRELLAS</h3>
-              <p>Con fabulosos cuartos te ofrecemos una buena atención</p>
-            </div>
-            <div className="footer_seccion">
-              <h3>CONTACTENOS</h3>
-              <p>Av.Arequipa</p>
-              <p>Celular: 957463521</p>
-              <p>E-mail: hotel5estrellas.gmail.com</p>
-
-            </div>
-
-          </div>
+          <Footer/>
         </footer>
       </div>
 
