@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { getList } from '../../../actions/categoria-action'
+import { getList, del } from '../../../actions/categoria-action'
 import { connect } from 'react-redux'
 
 import {
@@ -13,8 +13,10 @@ class List extends Component {
     componentWillMount() {
         this.props.getList("")
 }
+
+
     render() {
-        let { list} = this.props
+        let { list, del } = this.props
         if (list) {
 
         } else {
@@ -65,11 +67,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getList: (q) => { dispatch(getList(q)) },  
+        getList: (q) => { dispatch(getList(q)) },
+        del: (id, h) => { dispatch(del(id, h)) }
     }
 }
 
 export default connect(mapStateToProps, {
      getList,
-    
+     del
 })(List)
