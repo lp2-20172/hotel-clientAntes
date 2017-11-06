@@ -11,7 +11,7 @@ import {
 import { RouteWithSubRoutes } from '../utils/Routes'
 import { routes, routese } from '../routes'
 import Header from './Header/Header'
-import Footer from './Hooter/Footer'
+import Footer from './Footer/Footer'
 import { connect } from 'react-redux'
 import { toggleTheme } from '../../actions'
 import { login, logout } from '../utils/OAuth2'
