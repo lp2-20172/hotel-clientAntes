@@ -14,7 +14,7 @@ class List extends Component {
         this.props.getList("")
 }
     render() {
-        let { list} = this.props
+        let { list} = this.key
         if (list) {
 
         } else {
