@@ -1,7 +1,7 @@
 import { Content }
   from './app/AppContent'
-import CategoriaList from './hotel/categorias/List'
-import Information from './hotel/categorias/Information'
+import List from './hotel/categorias/List'
+import Habitacion from './hotel/habitacion/Habitacion'
 import Client from './hotel/clientes/Client'
 import Home from './hotel/home/Home'
 import Login from './Login'
@@ -27,13 +27,13 @@ const routes = [
     path: '/hotel/categorias/list',
     exact: true,
     title: 'Categorias',
-    component: CategoriaList
+    component: Habitacion
   },
   {
     path: '/informations',
     exact: true,
     title: 'Categorias',
-    component: Information
+    component: List
   },
 
   {

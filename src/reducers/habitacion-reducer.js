@@ -1,30 +1,30 @@
-import { CATEGORIA_LIST_REQUEST, CATEGORIA_LIST_SUCCESS, CATEGORIA_LIST_FAILURE } from '../actions/categoria-action'
-import { CATEGORIA_ADD, CATEGORIA_FETCH, CATEGORIA_UPDATE } from '../actions/categoria-action'
+import { HABITACION_LIST_REQUEST, HABITACION_LIST_SUCCESS, HABITACION_LIST_FAILURE } from '../actions/habitacion-action'
+import { HABITACION_ADD, HABITACION_FETCH, HABITACION_UPDATE } from '../actions/habitacion-action'
 
 const initialState = {
     list: [],
     data: {}
 }
 
-const categoriaReducer = (state = initialState, action) => {
+const habitacionReducer = (state = initialState, action) => {
     switch (action.type) {
 
-        case CATEGORIA_LIST_REQUEST: return {
+        case HABITACION_LIST_REQUEST: return {
             ...state,
             list: [],
             error: null
         }
-        case CATEGORIA_LIST_SUCCESS: return {
+        case HABITACION_LIST_SUCCESS: return {
             ...state,
             list: action.list,
             error: null
         }
-        case CATEGORIA_LIST_FAILURE: return {
+        case HABITACION_LIST_FAILURE: return {
             ...state,
             list: [],
             error: action.error,
         }
-        case CATEGORIA_UPDATE: return {
+        case HABITACION_UPDATE: return {
             ...state,
             //data: {} // no usado aun
         }
@@ -37,4 +37,4 @@ const categoriaReducer = (state = initialState, action) => {
 
 }
 
-export default categoriaReducer
+export default habitacionReducer

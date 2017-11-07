@@ -16,7 +16,7 @@ import {
 } from 'reactstrap';
 
 
-class Information extends Component {
+class List extends Component {
     render() {
         let { list} = this.props
         if (list) {

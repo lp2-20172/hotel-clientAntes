@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { getList } from '../../../actions/categoria-action'
+import { getList } from '../../../actions/habitacion-action'
 import { connect } from 'react-redux'
 
 import {
@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom'
 
 
-class List extends Component {
+class Habitacion extends Component {
     componentWillMount() {
         this.props.getList("")
 }
@@ -25,14 +25,14 @@ class List extends Component {
         return (
             <div className=" contenedor contenedor_habitacion" key="Subheader" >
                    { list.map((d, index) =>
-                    <div className="habitacion" key={d.fotos}>
+                    <div className="habitacion" key={d.foto}>
                         <div className="img-habitacion">
-                            <img src={d.fotos} alt={d.nombre} />
+                            <img src={d.foto} alt={d.categoria_nombre} />
                         </div>
                         <div className="info_rooms">
                             <div className="info">
                                 <h3>
-                                    {d.nombre}
+                                    {d.categoria_nombre}
                                 </h3>
                                 <p>
                                     s/ {d.precio}
@@ -52,13 +52,13 @@ class List extends Component {
         );
     }
 }
-List.propTypes = {
+Habitacion.propTypes = {
     list: PropTypes.array
 }
 
 const mapStateToProps = (state) => {
     return {
-        list: state.categoria.list
+        list: state.habitacion.list
     }
 }
 
@@ -72,4 +72,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(mapStateToProps, {
      getList,
     
-})(List)
+})(Habitacion)
