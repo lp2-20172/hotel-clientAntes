@@ -1,169 +1,94 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import { getList } from '../../../actions/categoria-action'
 import { connect } from 'react-redux'
 import {
-    Switch,
-    Route,
-    Link,
-    NavLink
-}from 'react-router-dom'
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
-} from 'reactstrap';
-
-
-class List extends Component {
-    render() {
-        let { list} = this.props
-        if (list) {
-
-        } else {
-            list = []
-
-        }
-
-        return (
-            <div >
-              { list.map((d, index) =>
-               <div className="habitacion habitacion_info" >
-               
-                    <div className="img img_info">
-                       <img  src="http://rossello-barcelona.eveniahotels.com/wp-content/uploads/2013/12/Family.jpg"/>
-                    </div>
-                    <div className="info_rooms">
-                        <div className="info info_reserva">
-                           <h3>
-                              Habitacion doble
-                           </h3>
-                           <p>
-                             S/50.soles
-                           </p>
-                           <p>
-                              <NavLink exact to="/forms"  activeClassName="selected">Reservar</NavLink>
-                           </p>
-                        </div>
-                   </div>
-                </div>
-              )}
-                <div className="informance">
-                  <p> asdasdasdasdasdasd</p>
-                </div>
-              
-            </div>
-        );
-    }
-}
+  Switch,
+  Route,
+  Link,
+  NavLink
+} from 'react-router-dom'
+import { UncontrolledCarousel } from 'reactstrap';
 const items = [
-  
   {
     src: 'http://rossello-barcelona.eveniahotels.com/wp-content/uploads/2013/12/Family.jpg',
-
-    caption:'Cama'
+    altText: 'Slide 1',
+    caption: 'Slide 1'
   },
   {
     src: 'http://www.ochoalacar.com/wp-content/uploads/2016/12/ba%C3%B1o-roca.jpeg',
-
-    caption: 'Baño'
+    altText: 'Slide 2',
+    caption: 'Slide 2'
   },
   {
     src: 'https://st.hzcdn.com/simgs/3e01c10a005769a5_4-3462/modern-balcony.jpg',
-
-    caption: 'Vista al mar'
+    altText: 'Slide 3',
+    caption: 'Slide 3'
   }
 ];
 
-class Example extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { activeIndex: 0 };
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-    this.goToIndex = this.goToIndex.bind(this);
-    this.onExiting = this.onExiting.bind(this);
-    this.onExited = this.onExited.bind(this);
-  }
 
-  onExiting() {
-    this.animating = true;
+class List extends Component {
+  componentWillMount() {
+    this.props.getList("")
   }
-
-  onExited() {
-    this.animating = false;
-  }
-
-  next() {
-    if (this.animating) return;
-    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
-    this.setState({ activeIndex: nextIndex });
-  }
-
-  previous() {
-    if (this.animating) return;
-    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
-    this.setState({ activeIndex: nextIndex });
-  }
-
-  goToIndex(newIndex) {
-    if (this.animating) return;
-    this.setState({ activeIndex: newIndex });
-  }
-
   render() {
-    const { activeIndex } = this.state;
+    let { list } = this.props
+    if (list) {
 
-    const slides = items.map((item) => {
-      return (
-        <CarouselItem
-          onExiting={this.onExiting}
-          onExited={this.onExited}
-          src={item.src}
-        >
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-        </CarouselItem>
-      );
-    });
+    } else {
+      list = []
+
+    }
 
     return (
       <div >
-         <div className="habitacion habitacion_info" >
-              <div className="img img_info">
-                <Carousel className="asd"
-                  activeIndex={activeIndex}
-                  next={this.next}
-                  previous={this.previous}
-                >
-                  <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-                  {slides}
-                  <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-                  <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-                </Carousel>
-              </div>
-              <div className="info_rooms">
-                  <div className="info info_reserva">
-                     <h3>
-                        Habitacion doble
-                     </h3>
-                     <p>
-                       S/50.soles
-                     </p>
-                     <p>
-                        <NavLink exact to="/forms"  activeClassName="selected">Reservar</NavLink>
-                     </p>
-                  </div>
-             </div>
-             <div className="informance">
-               <p> adsasdsdasdasdasd</p>
-             </div>
+         { list.map((d, index) =>
+        <div className="habitacion habitacion_info" >
+          <div className="img img_info">
+            <UncontrolledCarousel items={items} />
           </div>
+          <div className="info_rooms">
+            <div className="info info_reserva">
+              <h3>
+              {d.nombre}
+                     </h3>
+              <p>
+                S/{d.precio}
+                     </p>
+              <p>
+                <NavLink exact to="/forms" activeClassName="selected">Reservar</NavLink>
+              </p>
+            </div>
+          </div>
+          <div className="informance">
+            <p> adsasdsdasdasdasd</p>
+          </div>
+        </div>
+      )}
       </div>
-
     );
   }
 }
+List.propTypes = {
+  list: PropTypes.array
+}
 
-export default Example;
-// export default Information;
+const mapStateToProps = (state) => {
+  return {
+    list: state.categoria.list
+  }
+}
+
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getList: (q) => { dispatch(getList(q)) },
+  }
+}
+
+export default connect(mapStateToProps, {
+  getList,
+
+})(List)
+
