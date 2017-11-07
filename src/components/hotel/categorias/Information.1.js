@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { getList } from '../../../actions/categoria-action'
-import { connect } from 'react-redux'
 import {
     Switch,
     Route,
@@ -18,19 +16,9 @@ import {
 
 class Information extends Component {
     render() {
-        let { list} = this.props
-        if (list) {
-
-        } else {
-            list = []
-
-        }
-
         return (
             <div >
-              { list.map((d, index) =>
                <div className="habitacion habitacion_info" >
-               
                     <div className="img img_info">
                        <img  src="http://rossello-barcelona.eveniahotels.com/wp-content/uploads/2013/12/Family.jpg"/>
                     </div>
@@ -48,17 +36,17 @@ class Information extends Component {
                         </div>
                    </div>
                 </div>
-              )}
                 <div className="informance">
                   <p> asdasdasdasdasdasd</p>
                 </div>
-              
             </div>
         );
     }
 }
+
+
+
 const items = [
-  
   {
     src: 'http://rossello-barcelona.eveniahotels.com/wp-content/uploads/2013/12/Family.jpg',
 

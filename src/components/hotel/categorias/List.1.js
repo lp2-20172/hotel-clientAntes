@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { getList, del } from '../../../actions/categoria-action'
+import { getList } from '../../../actions/categoria-action'
 import { connect } from 'react-redux'
 
 import {
@@ -13,10 +13,8 @@ class List extends Component {
     componentWillMount() {
         this.props.getList("")
 }
-
-
     render() {
-        let { list, del } = this.props
+        let { list} = this.props
         if (list) {
 
         } else {
@@ -46,9 +44,7 @@ class List extends Component {
                                     <Link exact to="/forms" activeClassName="selected">Reservar</Link>
                                 </p>
                             </div>
-
                         </div>
-                      
                     </div>
                 )}
             </div>
@@ -69,12 +65,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getList: (q) => { dispatch(getList(q)) },
-        del: (id, h) => { dispatch(del(id, h)) }
+        getList: (q) => { dispatch(getList(q)) },  
     }
 }
 
 export default connect(mapStateToProps, {
      getList,
-     del
+    
 })(List)
