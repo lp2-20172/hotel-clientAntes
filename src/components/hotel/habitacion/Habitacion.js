@@ -34,9 +34,6 @@ class Habitacion extends Component {
                                 <h3>
                                     {d.categoria_nombre}
                                 </h3>
-                                <p>
-                                    s/ {d.precio}
-                                </p>
                             </div>
                             <div className="info info_color">
                                 <NavLink exact to="/informations" activeClassName="selected"><h3>Mas informacion</h3></NavLink>

@@ -9,6 +9,7 @@ import {
   NavLink
 } from 'react-router-dom'
 import { UncontrolledCarousel } from 'reactstrap';
+  
 const items = [
   {
     src: 'http://rossello-barcelona.eveniahotels.com/wp-content/uploads/2013/12/Family.jpg',
@@ -62,7 +63,7 @@ class List extends Component {
             </div>
           </div>
           <div className="informance">
-            <p> adsasdsdasdasdasd</p>
+            <p> {d.descripcion}</p>
           </div>
         </div>
       )}
