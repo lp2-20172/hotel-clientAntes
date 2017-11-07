@@ -1,7 +1,7 @@
 const config = {
     url: "http://localhost:8003/o/authorize/",
     //url: "https://hotel-serve.herokuapp.com/o/authorize/",
-    client: "ZHzx5C9XcgphOkmWcs6dqL5YqXtj0DV9znKUZSNQ",
+    client: "CrdL2kq8w0vciXiNuQppfODemJRE1i3esCF8lQTT",
     redirect: "http://localhost:3000",
     scope: "read",
     width: 400, // Width (in pixels) of login popup window. Optional, default: 400
