@@ -20,6 +20,7 @@ import { getLocalUserInfo } from '../../actions/auth-action'
 
 //estilos
 import '../css/style.css';
+import '../css/scriptmain.js';
 import '../images/font-awesome/css/font-awesome.min.css'
 
 class RouteConfigExample extends React.Component {
@@ -109,7 +110,7 @@ class RouteConfigExample extends React.Component {
         >
         <header>
           <Header/>
-        </header>   
+        </header>
         </div>
         <main>
           {routes.map((route, i) => (

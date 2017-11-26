@@ -10,10 +10,10 @@ class Header extends Component {
 
     render() {
         return (
-            <div>
-            <nav className="main">
-              <div className="imglogo">
+            <div className="mainflex">
+            <div className="imglogo">
               </div>
+            <nav id="main" className="main" >
               <ul>
                 <li><Link to="/home">Inicio</Link></li>
                 <li><Link to="/login">login</Link></li>
@@ -21,14 +21,14 @@ class Header extends Component {
                 <li><Link to="/photos">Fotos</Link></li>
                 <li><Link to='/form'>Registrate</Link></li>
               </ul>
-              <span>
-                <i className="fa fa-bars fa-2x " aria-hidden="true"></i>
-              </span>
+
             </nav>
+            <span id="main-icon" className="main_icon" >
+              <i className="fa fa-bars fa-2x " aria-hidden="true"></i>
+            </span>
           </div>
         );
     }
 }
 
 export default Header;
-
